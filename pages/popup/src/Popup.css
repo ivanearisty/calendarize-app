@@ -1,0 +1,46 @@
+.App {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 100%;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.App-logo:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button {
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #ff9800;
+}
