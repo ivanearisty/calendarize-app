@@ -1,0 +1,465 @@
+chrome-extension-boilerplate-react-vite
+├─ .env.local
+├─ .eslintignore
+├─ .eslintrc
+├─ .github
+│  ├─ CODEOWNERS
+│  ├─ FUNDING.yml
+│  ├─ ISSUE_TEMPLATE
+│  │  ├─ bug_report.md
+│  │  └─ feature_request.md
+│  ├─ auto_assign.yml
+│  ├─ dependabot.yml
+│  ├─ pull_request_template.md
+│  ├─ stale.yml
+│  └─ workflows
+│     ├─ auto-assign.yml
+│     ├─ build-zip.yml
+│     ├─ greetings.yml
+│     └─ lint.yml
+├─ .husky
+│  ├─ _
+│  │  ├─ applypatch-msg
+│  │  ├─ commit-msg
+│  │  ├─ h
+│  │  ├─ husky.sh
+│  │  ├─ post-applypatch
+│  │  ├─ post-checkout
+│  │  ├─ post-commit
+│  │  ├─ post-merge
+│  │  ├─ post-rewrite
+│  │  ├─ pre-applypatch
+│  │  ├─ pre-auto-gc
+│  │  ├─ pre-commit
+│  │  ├─ pre-push
+│  │  ├─ pre-rebase
+│  │  └─ prepare-commit-msg
+│  └─ pre-commit
+├─ .npmrc
+├─ .nvmrc
+├─ .prettierignore
+├─ .prettierrc
+├─ .turbo
+│  ├─ cache
+│  │  ├─ 0939c9f04076804c-meta.json
+│  │  ├─ 0939c9f04076804c.tar.zst
+│  │  ├─ 10d198ea8b63b337-meta.json
+│  │  ├─ 10d198ea8b63b337.tar.zst
+│  │  ├─ 175be60eeabf9fe0-meta.json
+│  │  ├─ 175be60eeabf9fe0.tar.zst
+│  │  ├─ 1a286c0a98a3dd25-meta.json
+│  │  ├─ 1a286c0a98a3dd25.tar.zst
+│  │  ├─ 276060483d0a0491-meta.json
+│  │  ├─ 276060483d0a0491.tar.zst
+│  │  ├─ 2d6bbfc7429dd18e-meta.json
+│  │  ├─ 2d6bbfc7429dd18e.tar.zst
+│  │  ├─ 366184f130eb9500-meta.json
+│  │  ├─ 366184f130eb9500.tar.zst
+│  │  ├─ 403f8deefc4583a4-meta.json
+│  │  ├─ 403f8deefc4583a4.tar.zst
+│  │  ├─ 5e2349df40064d36-meta.json
+│  │  ├─ 5e2349df40064d36.tar.zst
+│  │  ├─ 62ae92272f6657ab-meta.json
+│  │  ├─ 62ae92272f6657ab.tar.zst
+│  │  ├─ 7a51cfedc7b23e9d-meta.json
+│  │  ├─ 7a51cfedc7b23e9d.tar.zst
+│  │  ├─ 7cf4fcb0d539d2ba-meta.json
+│  │  ├─ 7cf4fcb0d539d2ba.tar.zst
+│  │  ├─ 932fc5d5fc88d44d-meta.json
+│  │  ├─ 932fc5d5fc88d44d.tar.zst
+│  │  ├─ 95244d989e71a4cc-meta.json
+│  │  ├─ 95244d989e71a4cc.tar.zst
+│  │  ├─ c09c55cdf543e33f-meta.json
+│  │  ├─ c09c55cdf543e33f.tar.zst
+│  │  ├─ c1ecc96cb31e3c8a-meta.json
+│  │  ├─ c1ecc96cb31e3c8a.tar.zst
+│  │  ├─ c80b4f9b182cbbee-meta.json
+│  │  ├─ c80b4f9b182cbbee.tar.zst
+│  │  ├─ dad04426c20d39f5-meta.json
+│  │  ├─ dad04426c20d39f5.tar.zst
+│  │  ├─ f4202b1d5e230a6b-meta.json
+│  │  ├─ f4202b1d5e230a6b.tar.zst
+│  │  ├─ fc703f03d19955ee-meta.json
+│  │  └─ fc703f03d19955ee.tar.zst
+│  ├─ cookies
+│  │  ├─ 1.cookie
+│  │  ├─ 10.cookie
+│  │  ├─ 11.cookie
+│  │  ├─ 12.cookie
+│  │  ├─ 13.cookie
+│  │  ├─ 14.cookie
+│  │  ├─ 15.cookie
+│  │  ├─ 16.cookie
+│  │  ├─ 17.cookie
+│  │  ├─ 18.cookie
+│  │  ├─ 19.cookie
+│  │  ├─ 2.cookie
+│  │  ├─ 20.cookie
+│  │  ├─ 21.cookie
+│  │  ├─ 22.cookie
+│  │  ├─ 23.cookie
+│  │  ├─ 24.cookie
+│  │  ├─ 25.cookie
+│  │  ├─ 26.cookie
+│  │  ├─ 27.cookie
+│  │  ├─ 28.cookie
+│  │  ├─ 29.cookie
+│  │  ├─ 3.cookie
+│  │  ├─ 30.cookie
+│  │  ├─ 31.cookie
+│  │  ├─ 32.cookie
+│  │  ├─ 33.cookie
+│  │  ├─ 34.cookie
+│  │  ├─ 35.cookie
+│  │  ├─ 36.cookie
+│  │  ├─ 37.cookie
+│  │  ├─ 38.cookie
+│  │  ├─ 39.cookie
+│  │  ├─ 4.cookie
+│  │  ├─ 40.cookie
+│  │  ├─ 41.cookie
+│  │  ├─ 42.cookie
+│  │  ├─ 43.cookie
+│  │  ├─ 44.cookie
+│  │  ├─ 45.cookie
+│  │  ├─ 46.cookie
+│  │  ├─ 47.cookie
+│  │  ├─ 48.cookie
+│  │  ├─ 49.cookie
+│  │  ├─ 5.cookie
+│  │  ├─ 50.cookie
+│  │  ├─ 51.cookie
+│  │  ├─ 52.cookie
+│  │  ├─ 53.cookie
+│  │  ├─ 54.cookie
+│  │  ├─ 55.cookie
+│  │  ├─ 56.cookie
+│  │  ├─ 57.cookie
+│  │  ├─ 58.cookie
+│  │  ├─ 59.cookie
+│  │  ├─ 6.cookie
+│  │  ├─ 60.cookie
+│  │  ├─ 61.cookie
+│  │  ├─ 62.cookie
+│  │  ├─ 63.cookie
+│  │  ├─ 64.cookie
+│  │  ├─ 65.cookie
+│  │  ├─ 66.cookie
+│  │  ├─ 67.cookie
+│  │  ├─ 68.cookie
+│  │  ├─ 69.cookie
+│  │  ├─ 7.cookie
+│  │  ├─ 70.cookie
+│  │  ├─ 71.cookie
+│  │  ├─ 72.cookie
+│  │  ├─ 73.cookie
+│  │  ├─ 74.cookie
+│  │  ├─ 75.cookie
+│  │  ├─ 76.cookie
+│  │  ├─ 8.cookie
+│  │  └─ 9.cookie
+│  └─ daemon
+│     ├─ b97bbcfa82f12e3d-turbo.log.2024-12-25
+│     ├─ b97bbcfa82f12e3d-turbo.log.2024-12-26
+│     └─ b97bbcfa82f12e3d-turbo.log.2024-12-28
+├─ LICENSE
+├─ README.md
+├─ UPDATE-PACKAGE-VERSIONS.md
+├─ chrome-extension
+│  ├─ .turbo
+│  │  └─ turbo-build.log
+│  ├─ lib
+│  │  ├─ background
+│  │  │  └─ index.ts
+│  │  ├─ openai.ts
+│  │  └─ prompts.ts
+│  ├─ manifest.js
+│  ├─ package.json
+│  ├─ public
+│  │  ├─ content.css
+│  │  ├─ icon-128.png
+│  │  └─ icon-34.png
+│  ├─ tsconfig.json
+│  ├─ utils
+│  │  └─ plugins
+│  │     └─ make-manifest-plugin.ts
+│  └─ vite.config.mts
+├─ dist-zip
+│  └─ extension.zip
+├─ learning.md
+├─ package.json
+├─ packages
+│  ├─ dev-utils
+│  │  ├─ .eslintignore
+│  │  ├─ .turbo
+│  │  │  └─ turbo-ready.log
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ logger.ts
+│  │  │  └─ manifest-parser
+│  │  │     ├─ impl.ts
+│  │  │     ├─ index.ts
+│  │  │     └─ type.ts
+│  │  ├─ package.json
+│  │  └─ tsconfig.json
+│  ├─ hmr
+│  │  ├─ .turbo
+│  │  │  └─ turbo-ready.log
+│  │  ├─ build
+│  │  │  └─ injections
+│  │  │     ├─ refresh.js
+│  │  │     └─ reload.js
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ constant.ts
+│  │  │  ├─ initializers
+│  │  │  │  ├─ initClient.ts
+│  │  │  │  └─ initReloadServer.ts
+│  │  │  ├─ injections
+│  │  │  │  ├─ refresh.ts
+│  │  │  │  └─ reload.ts
+│  │  │  ├─ interpreter
+│  │  │  │  └─ index.ts
+│  │  │  ├─ plugins
+│  │  │  │  ├─ index.ts
+│  │  │  │  ├─ make-entry-point-plugin.ts
+│  │  │  │  ├─ watch-public-plugin.ts
+│  │  │  │  └─ watch-rebuild-plugin.ts
+│  │  │  └─ types.ts
+│  │  ├─ package.json
+│  │  ├─ rollup.config.mjs
+│  │  ├─ tsconfig.build.json
+│  │  └─ tsconfig.json
+│  ├─ i18n
+│  │  ├─ .eslintignore
+│  │  ├─ .turbo
+│  │  │  ├─ turbo-build.log
+│  │  │  └─ turbo-ready.log
+│  │  ├─ README.md
+│  │  ├─ build.dev.mjs
+│  │  ├─ build.mjs
+│  │  ├─ build.prod.mjs
+│  │  ├─ genenrate-i18n.mjs
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ getMessageFromLocale.ts
+│  │  │  ├─ i18n-dev.ts
+│  │  │  ├─ i18n-prod.ts
+│  │  │  ├─ i18n.ts
+│  │  │  └─ type.ts
+│  │  ├─ locales
+│  │  │  ├─ en
+│  │  │  │  └─ messages.json
+│  │  │  └─ ko
+│  │  │     └─ messages.json
+│  │  ├─ package.json
+│  │  └─ tsconfig.json
+│  ├─ shared
+│  │  ├─ .eslintignore
+│  │  ├─ .turbo
+│  │  │  └─ turbo-ready.log
+│  │  ├─ README.md
+│  │  ├─ build.mjs
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ hoc
+│  │  │  │  ├─ index.ts
+│  │  │  │  ├─ withErrorBoundary.tsx
+│  │  │  │  └─ withSuspense.tsx
+│  │  │  └─ hooks
+│  │  │     ├─ index.ts
+│  │  │     └─ useStorage.tsx
+│  │  ├─ package.json
+│  │  └─ tsconfig.json
+│  ├─ storage
+│  │  ├─ .eslintignore
+│  │  ├─ .turbo
+│  │  │  └─ turbo-ready.log
+│  │  ├─ build.mjs
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ base.ts
+│  │  │  ├─ enums.ts
+│  │  │  ├─ exampleThemeStorage.ts
+│  │  │  ├─ index.ts
+│  │  │  ├─ openaiKeyStorage.ts
+│  │  │  └─ types.ts
+│  │  ├─ package.json
+│  │  └─ tsconfig.json
+│  ├─ tailwind-config
+│  │  ├─ package.json
+│  │  └─ tailwind.config.js
+│  ├─ tsconfig
+│  │  ├─ app.json
+│  │  ├─ base.json
+│  │  ├─ package.json
+│  │  └─ utils.json
+│  ├─ ui
+│  │  ├─ .turbo
+│  │  │  └─ turbo-ready.log
+│  │  ├─ README.md
+│  │  ├─ build.mjs
+│  │  ├─ index.ts
+│  │  ├─ lib
+│  │  │  ├─ components
+│  │  │  │  ├─ Button.tsx
+│  │  │  │  └─ index.ts
+│  │  │  ├─ global.css
+│  │  │  ├─ utils.ts
+│  │  │  └─ withUI.ts
+│  │  ├─ package.json
+│  │  ├─ tailwind.config.ts
+│  │  └─ tsconfig.json
+│  ├─ vite-config
+│  │  ├─ index.mjs
+│  │  ├─ lib
+│  │  │  ├─ env.mjs
+│  │  │  └─ withPageConfig.mjs
+│  │  └─ package.json
+│  └─ zipper
+│     ├─ .eslintignore
+│     ├─ .turbo
+│     │  └─ turbo-ready.log
+│     ├─ index.ts
+│     ├─ lib
+│     │  └─ zip-bundle
+│     │     └─ index.ts
+│     ├─ package.json
+│     └─ tsconfig.json
+├─ pages
+│  ├─ content
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ lib
+│  │  │  ├─ index.ts
+│  │  │  └─ toggleTheme.ts
+│  │  ├─ package.json
+│  │  ├─ public
+│  │  │  └─ logo.svg
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ content-runtime
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ lib
+│  │  │  ├─ app.tsx
+│  │  │  ├─ index.css
+│  │  │  ├─ index.ts
+│  │  │  └─ root.tsx
+│  │  ├─ package.json
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ content-ui
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ package.json
+│  │  ├─ public
+│  │  │  └─ logo.svg
+│  │  ├─ src
+│  │  │  ├─ app.tsx
+│  │  │  ├─ index.tsx
+│  │  │  └─ tailwind-input.css
+│  │  ├─ tailwind.config.js
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ devtools
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ index.html
+│  │  ├─ package.json
+│  │  ├─ public
+│  │  │  └─ logo.svg
+│  │  ├─ src
+│  │  │  └─ index.ts
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ devtools-panel
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ index.html
+│  │  ├─ package.json
+│  │  ├─ postcss.config.js
+│  │  ├─ public
+│  │  │  ├─ logo_horizontal.svg
+│  │  │  └─ logo_horizontal_dark.svg
+│  │  ├─ src
+│  │  │  ├─ Panel.css
+│  │  │  ├─ Panel.tsx
+│  │  │  ├─ index.css
+│  │  │  └─ index.tsx
+│  │  ├─ tailwind.config.js
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ new-tab
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ index.html
+│  │  ├─ package.json
+│  │  ├─ postcss.config.js
+│  │  ├─ public
+│  │  │  ├─ logo_horizontal.svg
+│  │  │  └─ logo_horizontal_dark.svg
+│  │  ├─ src
+│  │  │  ├─ NewTab.css
+│  │  │  ├─ NewTab.scss
+│  │  │  ├─ NewTab.tsx
+│  │  │  ├─ index.css
+│  │  │  └─ index.tsx
+│  │  ├─ tailwind.config.js
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ options
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ index.html
+│  │  ├─ package.json
+│  │  ├─ postcss.config.js
+│  │  ├─ public
+│  │  │  ├─ Logo Dark.svg
+│  │  │  ├─ logo_horizontal.svg
+│  │  │  └─ logo_horizontal_dark.svg
+│  │  ├─ src
+│  │  │  ├─ Options.css
+│  │  │  ├─ Options.tsx
+│  │  │  ├─ index.css
+│  │  │  └─ index.tsx
+│  │  ├─ tailwind.config.js
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  ├─ popup
+│  │  ├─ .turbo
+│  │  │  └─ turbo-build.log
+│  │  ├─ index.html
+│  │  ├─ package.json
+│  │  ├─ postcss.config.js
+│  │  ├─ public
+│  │  │  └─ Logo Dark.svg
+│  │  ├─ src
+│  │  │  ├─ Popup.css
+│  │  │  ├─ Popup.tsx
+│  │  │  ├─ index.css
+│  │  │  └─ index.tsx
+│  │  ├─ tailwind.config.js
+│  │  ├─ tsconfig.json
+│  │  └─ vite.config.mts
+│  └─ side-panel
+│     ├─ .turbo
+│     │  └─ turbo-build.log
+│     ├─ index.html
+│     ├─ package.json
+│     ├─ postcss.config.js
+│     ├─ public
+│     │  ├─ logo_vertical.svg
+│     │  └─ logo_vertical_dark.svg
+│     ├─ src
+│     │  ├─ SidePanel.css
+│     │  ├─ SidePanel.tsx
+│     │  ├─ index.css
+│     │  └─ index.tsx
+│     ├─ tailwind.config.js
+│     ├─ tsconfig.json
+│     └─ vite.config.mts
+├─ pnpm-lock.yaml
+├─ pnpm-workspace.yaml
+├─ turbo.json
+└─ update_version.sh

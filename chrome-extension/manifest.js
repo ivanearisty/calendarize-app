@@ -24,11 +24,17 @@ const manifest = deepmerge(
      * if you want to support multiple languages, you can use the following reference
      * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization
      */
-    name: '__MSG_extensionName__',
+    name: 'Calendarize',
     version: packageJson.version,
-    description: '__MSG_extensionDescription__',
-    host_permissions: ['<all_urls>'],
-    permissions: ['storage', 'scripting'],
+    description:
+      'Calendarize is a simple extension to add events to your Google Calendar using context from the web page you are currently browsing.',
+    host_permissions: ['https://www.googleapis.com/*', 'https://api.openai.com/*'],
+    permissions: ['identity', 'storage', 'scripting', 'activeTab', 'contextMenus'],
+    oauth2: {
+      client_id: '477909400950-cvrm725dgmbefef91m68a0a6ar8pa75r.apps.googleusercontent.com',
+      scopes: ['https://www.googleapis.com/auth/calendar'],
+    },
+    key: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtbomW8vFLhDsTfNo3Wl+r6jsh7QIV1FYcbGiv4EN5qpH1KwYYaRROEnn2tZ11p0I/xtdAEtYrHwwbh9+x4+BeTR++UqHiMCKjkfNXJln1938zfKh+LZaupM0IM1tEA7s05jY+IPJ7yhMjLWeA/dkPLaIdSdMsi/pnLo1gOQ0Z7k75ajj9424q7BDKMs2dYTU4S6BDbxbRdL/VH67Zym4LUuV6fscRge7LCBFZbmfHZbhzEFdgxLwgeqNJ62W+yMHkfZrEetfiyIubg/0xYqovajXoGN9KCJ0d4Qy7V8l9wfiE87ktlve9R10OrrQz3srpvbTStn/aDw1FIDk+DFtaQIDAQAB',
     options_page: 'options/index.html',
     background: {
       service_worker: 'background.iife.js',
@@ -37,10 +43,6 @@ const manifest = deepmerge(
     action: {
       default_popup: 'popup/index.html',
       default_icon: 'icon-34.png',
-    },
-    /* remove after development */
-    chrome_url_overrides: {
-      newtab: 'new-tab/index.html',
     },
     icons: {
       128: 'icon-128.png',
@@ -56,7 +58,7 @@ const manifest = deepmerge(
       },
       {
         matches: ['http://*/*', 'https://*/*', '<all_urls>'],
-        css: ['content.css'], // public folder
+        css: ['content.css'],
       },
     ],
     devtools_page: 'devtools/index.html',
