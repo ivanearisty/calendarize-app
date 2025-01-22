@@ -12,13 +12,17 @@ const Options = () => {
   const [loggedInGoogle, setLoggedInGoogle] = useState(false);
   const [loggedInOpenAI, setloggedInOpenAI] = useState(false);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setInputValue(event.target.value);
+  // };
+
+  // const isLoggedInOpenAi = async () => {};
+
+  // const logInOpenAI = async (token: string) => {};
+
+  const logOutOpenai = async () => {
+    setloggedInOpenAI(false);
   };
-
-  const isLoggedInOpenAi = async () => {};
-
-  const logInOpenAI = async (token: string) => {};
 
   const isLoggedInGoogle = async () => {
     try {
@@ -80,17 +84,17 @@ const Options = () => {
     }
   };
 
-  const handleSave = () => {
-    chrome.storage.local.set({ exampleKey: inputValue }, () => {
-      console.log('Value saved to storage:', inputValue);
-    });
-  };
+  // const handleSave = () => {
+  //   chrome.storage.local.set({ exampleKey: inputValue }, () => {
+  //     console.log('Value saved to storage:', inputValue);
+  //   });
+  // };
 
   useEffect(() => {
     const checkLoginStatus = async () => {
       const googleLogin = await isLoggedInGoogle();
       setLoggedInGoogle(googleLogin);
-      const openAiLogin = await isLoggedInOpenAi();
+      // const openAiLogin = await isLoggedInOpenAi();
       // setloggedInOpenAI(openAiLogin);
     };
 
@@ -121,19 +125,21 @@ const Options = () => {
           {loggedInOpenAI ? "You're connected to OpenAI!" : 'Connect to OpenAI'}
         </Button>
 
-        {loggedInGoogle && (
+        {loggedInGoogle ? (
           <Button
             className={cn(theme === 'light' ? 'hover:bg-red-100' : 'hover:bg-red-700')}
             onClick={logOutGoogle} // Call a logout function
             theme={theme}>
             Log out from Google
           </Button>
+        ) : (
+          <div></div>
         )}
 
         {loggedInOpenAI ? (
           <Button
             className={cn(theme === 'light' ? 'hover:bg-red-100' : 'hover:bg-red-700')}
-            // onClick={logOutOpenai}
+            onClick={logOutOpenai}
             theme={theme}>
             Log out from OpenAI
           </Button>

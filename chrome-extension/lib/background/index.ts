@@ -21,7 +21,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   console.log('Context menu created');
 });
 
-chrome.contextMenus.onClicked.addListener(async (info: chrome.contextMenus.OnClickData, tab?: chrome.tabs.Tab) => {
+chrome.contextMenus.onClicked.addListener(async (info: chrome.contextMenus.OnClickData, _tab?: chrome.tabs.Tab) => {
   if (info.menuItemId === createCalendarEventID) console.log('User Selected ', info.selectionText);
   if (info) console.log('test');
 });

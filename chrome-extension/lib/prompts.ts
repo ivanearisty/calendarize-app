@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const get_event_information_function = {
   name: 'get_event_information',
   description: 'Get the event information from the input text.',
@@ -49,6 +50,7 @@ const generate_ical_file_function = {
     required: ['filename', 'ical'],
   },
 };
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 // export function GCalLink(selectionText) {
 
